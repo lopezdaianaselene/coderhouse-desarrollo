@@ -1,0 +1,92 @@
+header {
+  padding: 60px;
+  background-color: #2f615e;
+  color: #bc6a28; }
+
+nav {
+  display: inline-block !important;
+  width: 80%;
+  margin-left: 100px; }
+
+main {
+  background-color: #f4e1a4;
+  padding: 3% 0 1% 0; }
+
+body {
+  background-color: #f4e1a4 !important;
+  font-family: 'Courier Prime', monospace !important; }
+
+footer {
+  border-top: 3px solid black;
+  display: inline-block;
+  padding: 30px 0 0 30px;
+  width: 100%;
+  background-color: #f4e1a4;
+  position: sticky;
+  margin-bottom: 10px;
+  bottom: 0px; }
+
+.subMenu {
+  background-color: #2f615e !important;
+  border: none !important; }
+
+.dropdown-item:active {
+  background-color: inherit !important; }
+
+.dropdown-item:hover {
+  background-color: inherit !important; }
+
+.inputFormulario {
+  margin: 10px 0; }
+
+.botonPrincipal {
+  background-color: #2f615e !important; }
+
+.menuItem {
+  display: inline-block;
+  width: 20%;
+  position: relative;
+  font-size: 14px; }
+
+.navbar-nav .subMenu {
+  position: absolute;
+  display: none; }
+
+.navbar-nav .nav-item {
+  display: block; }
+  .navbar-nav .nav-item:hover .subMenu {
+    display: block; }
+
+/*Esto hay que meterlo en media query para que no lo haga si hay toggle*/
+.navbar-nav li:hover > ul.dropdown-menu {
+  display: block; }
+
+.nav-item a {
+  text-decoration: none;
+  color: #bc6a28; }
+  .nav-item a:hover {
+    text-decoration: none;
+    color: #bc6a28; }
+
+.logo {
+  width: 120px;
+  height: 120px; }
+
+.redSocial {
+  width: 30px; }
+
+.redes {
+  display: block;
+  padding: 10px 0 0 5px; }
+
+.imagenPrincipal {
+  justify-content: center;
+  margin-bottom: 2%; }
+
+.itemGrilla img {
+  width: 100%; }
+
+.infotografia .row {
+  padding: 20px 0; }
+  .infotografia .row p {
+    align-self: center; }

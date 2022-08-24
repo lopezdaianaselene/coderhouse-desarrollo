@@ -1,7 +1,7 @@
 header {
   padding: 60px;
-  background-color: #2f615e;
-  color: #bc6a28; }
+  background-color: #2f615e !important;
+  color: #bc6a28 !important; }
 
 nav {
   display: inline-block !important;
@@ -9,7 +9,7 @@ nav {
   margin-left: 100px; }
 
 main {
-  background-color: #f4e1a4;
+  background-color: #f4e1a4 !important;
   padding: 3% 0 1% 0; }
 
 body {
@@ -25,6 +25,9 @@ footer {
   position: sticky;
   margin-bottom: 10px;
   bottom: 0px; }
+
+h1 {
+  text-align: center; }
 
 .subMenu {
   background-color: #2f615e !important;
@@ -90,3 +93,6 @@ footer {
   padding: 20px 0; }
   .infotografia .row p {
     align-self: center; }
+
+.card {
+  margin-bottom: 40px; }

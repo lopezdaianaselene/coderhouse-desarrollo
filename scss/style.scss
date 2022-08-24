@@ -1,23 +1,34 @@
+$colores: ( 
+        encabezado: #2f615e,
+        encabezadoTexto:  #bc6a28,
+        cuerpo:  #f4e1a4,
+        boton: #2f615e
+); 
+
+@mixin ancho($valor) {
+   width: $valor
+}
+
 header {
    padding: 60px;
-   background-color: #2f615e;
-   color: #bc6a28
+   background-color: map-get($map: $colores, $key: encabezado) !important;
+   color: map-get($map: $colores, $key: encabezadoTexto) !important;
 }
 
 nav {
    display: inline-block !important;
-   width: 80%;
+   @include ancho(80%);
    margin-left: 100px;
 }
 
 main {
-   background-color: #f4e1a4;
+   background-color:  map-get($map: $colores, $key: cuerpo) !important;
    padding: 3% 0 1% 0;
 }
 
 
 body {
-   background-color: #f4e1a4 !important;
+   background-color: map-get($map: $colores, $key: cuerpo)  !important;
    font-family: 'Courier Prime', monospace !important;
 }
     
@@ -25,15 +36,20 @@ footer {
    border-top: 3px solid black;
    display: inline-block;
    padding: 30px 0 0 30px;
-   width: 100%;
-   background-color: #f4e1a4;
+   @include ancho(100%);
+   background-color: map-get($map: $colores, $key: cuerpo);
    position: sticky;
    margin-bottom: 10px;
    bottom: 0px;
 }
 
+h1 
+{
+   text-align: center;
+}
+
 .subMenu {
-   background-color: #2f615e !important;
+   background-color: map-get($map: $colores, $key: encabezado)  !important;
    border: none !important;
 }
 
@@ -51,12 +67,12 @@ footer {
 
 .botonPrincipal 
 {
-   background-color: #2f615e !important;
+   background-color: map-get($map: $colores, $key: boton)  !important;
 }
 
  .menuItem {
     display: inline-block;
-    width: 20%;
+    @include ancho(20%);
     position:relative;
     font-size: 14px
  }
@@ -85,23 +101,23 @@ footer {
  {
    a {
       text-decoration: none;
-      color: #bc6a28;
+      color: map-get($map: $colores, $key: encabezadoTexto) ;
 
       &:hover {
          text-decoration: none;
-         color: #bc6a28
+         color: map-get($map: $colores, $key: encabezadoTexto) ;
       }
    }
  }
 
  .logo {
-    width: 120px;
+   @include ancho(120px); 
     height: 120px;
  }
 
 
 .redSocial {
-    width: 30px;
+   @include ancho(30px); 
 }
 
 .redes {
@@ -115,7 +131,7 @@ footer {
 }
 
 .itemGrilla img  {
-   width: 100%;
+   @include ancho(100%); 
 }
 
 .infotografia 
@@ -127,4 +143,10 @@ footer {
          align-self: center;
       }
    }
+}
+
+
+.card
+{
+   margin-bottom: 40px;
 }

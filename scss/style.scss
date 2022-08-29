@@ -1,35 +1,19 @@
-$colores: ( 
-        encabezado: #2f615e,
-        encabezadoTexto:  #bc6a28,
-        cuerpo:  #f4e1a4,
-        boton: #2f615e
-); 
 
-@mixin ancho($valor) {
-   width: $valor
-}
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "colors.scss";
+@import "header.scss";
 
-header {
-   padding: 60px;
-   background-color: map-get($map: $colores, $key: encabezado) !important;
-   color: map-get($map: $colores, $key: encabezadoTexto) !important;
-}
 
-nav {
-   display: inline-block !important;
-   @include ancho(80%);
-   margin-left: 100px;
-}
 
 main {
-   background-color:  map-get($map: $colores, $key: cuerpo) !important;
+   background-color:  map-get($map: $colores, $key: cuerpo);
    padding: 3% 0 1% 0;
 }
 
 
 body {
-   background-color: map-get($map: $colores, $key: cuerpo)  !important;
-   font-family: 'Courier Prime', monospace !important;
+   background-color: map-get($map: $colores, $key: cuerpo);
+   font-family: 'Courier Prime', monospace;
 }
     
 footer {
@@ -48,67 +32,16 @@ h1
    text-align: center;
 }
 
-.subMenu {
-   background-color: map-get($map: $colores, $key: encabezado)  !important;
-   border: none !important;
-}
-
-.dropdown-item:active {
-   background-color: inherit !important;
-}
-
-.dropdown-item:hover {
-   background-color: inherit !important;
-}
-
 .inputFormulario {
    margin: 10px 0;
 }
 
 .botonPrincipal 
 {
-   background-color: map-get($map: $colores, $key: boton)  !important;
+   background-color: map-get($map: $colores, $key: boton);
 }
 
- .menuItem {
-    display: inline-block;
-    @include ancho(20%);
-    position:relative;
-    font-size: 14px
- }
  
- .navbar-nav {
-   .subMenu {
-      position: absolute;
-      display: none;
-   }
-   .nav-item {
-      display: block;
-      &:hover {
-         .subMenu {
-            display:block;
-         }
-      }
-   }
- }
-
- /*Esto hay que meterlo en media query para que no lo haga si hay toggle*/
- .navbar-nav li:hover > ul.dropdown-menu {
-   display: block;
-}
-
- .nav-item 
- {
-   a {
-      text-decoration: none;
-      color: map-get($map: $colores, $key: encabezadoTexto) ;
-
-      &:hover {
-         text-decoration: none;
-         color: map-get($map: $colores, $key: encabezadoTexto) ;
-      }
-   }
- }
 
  .logo {
    @include ancho(120px); 

@@ -1,0 +1,70 @@
+
+@mixin ancho($valor) {
+    width: $valor
+ }
+ 
+ header {
+    padding: 60px;
+    background-color: map-get($map: $colores, $key: encabezado);
+    color: map-get($map: $colores, $key: encabezadoTexto);
+ }
+ 
+ nav {
+    @include ancho(80%);
+    margin-left: 100px;
+ }
+ 
+ 
+ .subMenu {
+    background-color: map-get($map: $colores, $key: encabezado);
+    border: none !important;
+ }
+ 
+ .dropdown-item:active {
+    background-color: inherit;
+ }
+ 
+ .dropdown-item:hover {
+    background-color: inherit;
+ }
+ 
+ .menuItem {
+    display: inline-block;
+    @include ancho(20%);
+    position:relative;
+    font-size: 14px
+ }
+ 
+ .navbar-nav {
+   .subMenu {
+      position: absolute;
+      display: none;
+   }
+   .nav-item {
+      display: block;
+      &:hover {
+         .subMenu {
+            display:block;
+         }
+      }
+   }
+ }
+ 
+ /*Esto hay que meterlo en media query para que no lo haga si hay toggle*/
+ .navbar-nav li:hover > ul.dropdown-menu {
+   display: block;
+ }
+ 
+ .nav-item 
+ {
+   a {
+      text-decoration: none;
+      color: map-get($map: $colores, $key: encabezadoTexto) ;
+ 
+      &:hover {
+         text-decoration: none;
+         color: map-get($map: $colores, $key: encabezadoTexto) ;
+      }
+   }
+ }
+ 

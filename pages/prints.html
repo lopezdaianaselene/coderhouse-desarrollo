@@ -29,7 +29,7 @@
             <li class="nav-item">
               <a href="../pages/tienda.html" class="nav-link">TIENDA</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown menuServicios">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 SERVICIOS
@@ -38,6 +38,12 @@
                 <li><a class="dropdown-item" href="../pages/prints.html">PRINTS</a></li>
                 <li><a class="dropdown-item" href="../pages/revelados.html">REVELADOS</a></li>
               </ul>
+            </li>
+            <li class="nav-item menuMobile">
+              <a href="../pages/prints.html" class="nav-link">PRINTS</a>
+            </li>
+            <li class="nav-item menuMobile">
+              <a href="../pages/revelados.html" class="nav-link">REVELADOS</a>
             </li>
             <li class="nav-item">
               <a href="../pages/infotografia.html" class="nav-link">INFOTOGRAFIA</a>
@@ -53,15 +59,15 @@
   <main>
     <div class="container">
       <h1>PRINTS</h1>
-      <div class="row">
-        <img src="../img/auto1.JPG" alt="print 1" class="col-lg-4">
-        <img src="../img/auto2.JPG" alt="print 2" class="col-lg-4">
-        <img src="../img/auto3.JPG" alt="print 3" class="col-lg-4">
+      <div class="row justify-content-evenly p-4">
+        <img src="../img/auto1.JPG" alt="print 1" class="col-lg-3 imagenGrilla">
+        <img src="../img/auto2.JPG" alt="print 2" class="col-lg-3 imagenGrilla">
+        <img src="../img/auto3.JPG" alt="print 3" class="col-lg-3 imagenGrilla">
       </div>
-      <div class="row p-4">
-        <img src="../img/auto4.JPG" alt="print 4" class="col-lg-4">
-        <img src="../img/auto5.JPG" alt="print 5" class="col-lg-4">
-        <img src="../img/auto6.png" alt="print 6" class="col-lg-4">
+      <div class="row justify-content-evenly p-4">
+        <img src="../img/auto4.JPG" alt="print 4" class="col-lg-3 imagenGrilla">
+        <img src="../img/auto5.JPG" alt="print 5" class="col-lg-3 imagenGrilla">
+        <img src="../img/auto6.png" alt="print 6" class="col-lg-3 imagenGrilla">
       </div>
     </div>
   </main>
@@ -76,7 +82,7 @@
     </div>
 
   </footer>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js">
   </script>
 </body>
 

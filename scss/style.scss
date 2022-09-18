@@ -1,5 +1,9 @@
 
+
+// 2. Include any default variable overrides here
+$navbar-brand-margin-end : 50px;
 @import "../node_modules/bootstrap/scss/bootstrap";
+
 @import "colors.scss";
 @import "header.scss";
 
@@ -52,7 +56,7 @@ h1
 .redSocial {
    @include ancho(30px); 
 }
-
+ 
 .redes {
     display: block;
     padding: 10px 0 0 5px;
@@ -60,11 +64,97 @@ h1
 
 .imagenPrincipal {
    justify-content: center;
+   margin-bottom: 5%;
+}
+
+.filaOferta {
    margin-bottom: 2%;
 }
 
+.formularioChico {
+   margin-bottom: 25%;
+}
+
+
+.formulario {
+   margin-bottom: 10%;
+}
+
 .itemGrilla img  {
-   @include ancho(100%); 
+   @include ancho(75%); 
+}
+
+.seccionHome 
+{
+   text-align: center;
+
+}
+
+@media (max-width: 1200px) {
+   .seccionHome img {
+      width: 90%;
+   }
+
+   .formularioChico {
+      width: 50%;
+   }
+
+   .formulario {
+      width: 50%;
+   }
+}
+
+@media (min-width: 1200px) {
+
+   .formularioChico {
+      width: 30%;
+   }
+
+   .formulario {
+      width: 30%;
+   }
+
+}
+
+
+@media (min-width: 992px) {
+
+   .menuMobile {
+      display: none !important; 
+   }
+
+}
+
+@media (max-width: 992px) {
+   .menuServicios {
+      display: none !important;
+   }
+
+   .menuMobile{
+      display: block !important;
+   }
+
+   .parrafoInfotografia
+   {
+      margin: 40px 0px;
+   }
+
+   .imagenGrilla {
+      margin: 20px 0px;
+   }
+}
+
+@media (max-width: 768px) {
+   .seccionHome img {
+      width: auto;
+   }
+   .formularioChico {
+      width: 75%;
+   }
+   
+   .formulario {
+      width: 75%;
+   }
 }
 
 .infotografia 
@@ -82,4 +172,11 @@ h1
 .card
 {
    margin-bottom: 40px;
+}
+
+
+hr 
+{
+   border-top: 2px solid;
+   opacity: 1;
 }

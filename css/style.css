@@ -3003,7 +3003,7 @@ textarea.form-control-lg {
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
-  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-brand-margin-end: 50px;
   --bs-navbar-brand-font-size: 1.25rem;
   --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
@@ -8369,13 +8369,13 @@ textarea.form-control-lg {
     display: none !important; } }
 
 header {
-  padding: 60px;
+  padding: 15px;
   background-color: #2f615e;
   color: #bc6a28; }
 
 nav {
   width: 80%;
-  margin-left: 100px; }
+  margin-left: 50px; }
 
 .subMenu {
   background-color: #2f615e;
@@ -8405,6 +8405,10 @@ nav {
 /*Esto hay que meterlo en media query para que no lo haga si hay toggle*/
 .navbar-nav li:hover > ul.dropdown-menu {
   display: block; }
+
+@media (max-width: 992px) {
+  #navbarSupportedContent {
+    text-align: center; } }
 
 .nav-item a {
   text-decoration: none;
@@ -8453,10 +8457,58 @@ h1, .h1 {
 
 .imagenPrincipal {
   justify-content: center;
+  margin-bottom: 5%; }
+
+.filaOferta {
   margin-bottom: 2%; }
 
+.formularioChico {
+  margin-bottom: 25%; }
+
+.formulario {
+  margin-bottom: 10%; }
+
 .itemGrilla img {
-  width: 100%; }
+  width: 75%; }
+
+.seccionHome {
+  text-align: center; }
+
+@media (max-width: 1200px) {
+  .seccionHome img {
+    width: 90%; }
+  .formularioChico {
+    width: 50%; }
+  .formulario {
+    width: 50%; } }
+
+@media (min-width: 1200px) {
+  .formularioChico {
+    width: 30%; }
+  .formulario {
+    width: 30%; } }
+
+@media (min-width: 992px) {
+  .menuMobile {
+    display: none !important; } }
+
+@media (max-width: 992px) {
+  .menuServicios {
+    display: none !important; }
+  .menuMobile {
+    display: block !important; }
+  .parrafoInfotografia {
+    margin: 40px 0px; }
+  .imagenGrilla {
+    margin: 20px 0px; } }
+
+@media (max-width: 768px) {
+  .seccionHome img {
+    width: auto; }
+  .formularioChico {
+    width: 75%; }
+  .formulario {
+    width: 75%; } }
 
 .infotografia .row {
   padding: 20px 0; }
@@ -8465,3 +8517,7 @@ h1, .h1 {
 
 .card {
   margin-bottom: 40px; }
+
+hr {
+  border-top: 2px solid;
+  opacity: 1; }
